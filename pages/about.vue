@@ -1,14 +1,18 @@
 <template>
     <div>
-        <h2>AboutPage</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum sequi aut suscipit quaerat magni earum eaque quasi, recusandae assumenda sunt similique. Qui quae vitae voluptatum, consequuntur sunt corporis veniam.</p>   
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, voluptatum sequi aut suscipit quaerat magni earum eaque quasi, recusandae assumenda sunt similique. Qui quae vitae voluptatum, consequuntur sunt corporis veniam.</p>   
+        <p>{{ data }}</p>
     </div>
 </template>
+  
+  <script setup>
 
-<script setup>
-
-</script>
+//   const { data } = await useFetch('/api/risto?name=risto',{
+//     method: 'post',
+//     body: { age: 27 }
+//   })
+    // const { data } = await useFetch('/api/risto')
+    const { data } = await useFetch('/api/currency/USD')
+  </script>
 
 <style scoped>
 h2{
@@ -21,4 +25,11 @@ p{
 router-link-exact-active {
       color: #12b488;
     }
+h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+p {
+    margin: 20px 0;
+}
 </style>
